@@ -1,0 +1,39 @@
+{
+    "configurations": [
+        {
+            "name": "(windows-wsl)Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "main",
+            "args": [
+                "4",
+                "3",
+                "2",
+                "1"
+            ],
+            "stopAtEntry": false,
+            "cwd": "/mnt/c/source/bubble",
+            "environment": [],
+            "externalConsole": true,
+            "pipeTransport": {
+                "debuggerPath": "/usr/bin/gdb",
+                "pipeProgram": "${env:windir}\\system32\\bash.exe",
+                "pipeArgs": [
+                    "-c"
+                ],
+                "pipeCwd": ""
+            },
+            "sourceFileMap": {
+                "/mnt/c/source/bubble":"${workspaceFolder}"
+            },
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}
